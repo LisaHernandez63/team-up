@@ -1,0 +1,173 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body {
+    color: #717171;
+  }
+
+  a {
+    color: #9064AB;
+  }
+
+  a:hover {
+    color: #479CE5;
+  }
+
+ .recent-team {
+   border-radius: 50%;
+   width: 100%;
+   height: 300px
+ }
+
+ .center-cropped {
+   background-position: center center;
+   background-repeat: no-repeat;
+ }
+
+ .center-cropped img {
+   max-width: 100%;
+   min-height: auto;
+   width: 300px;
+ }
+
+ .nav-links {
+   max-width: 50%;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ #recently-added-teams {
+   padding: 20px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+ }
+
+ #about-us {
+   padding: 20px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+ }
+
+ #bottom-bar {
+   padding: 20px;
+   margin-top: 20px;
+ }
+
+ .vote-buttons form {
+   display: inline;
+ }
+
+ .form-element {
+   max-width: 400px;
+   margin: 0 auto;
+ }
+
+ .vote-buttons input[type=submit] {
+   width: 150px;
+ }
+
+ .no-bullets {
+   list-style: none;
+ }
+
+ .white-text {
+   color:white;
+ }
+
+ .grey-bg {
+   background-color: #CCC;
+ }
+
+ .purple-text {
+   color: #540E7C;
+ }
+
+ .purple-bg {
+   background-color: #9064AB;
+ }
+
+ .bold {
+   font-weight: bold;
+ }
+
+ .find-team-dropdown {
+   background-color: #327CC4;
+   color: #FFF;
+   min-width: 200px;
+ }
+
+ .align-middle-dropdown {
+   margin-left: auto;
+   margin-right: auto;
+   max-width: 200px;
+ }
+
+ .button {
+   background-color: #351D75;
+   width: 150px;
+ }
+
+ #team-list {
+   margin: 0;
+ }
+
+ #add-background-blue {
+   background: #3C4E75;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 100%;
+   padding: 120px 10px 120px 10px;
+ }
+
+ #add-background-light {
+   background: #F7F7F7;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 100%;
+   padding: 50px 10px 50px 10px;
+ }
+
+
+ #add-team-banner {
+   background-image: linear-gradient(
+       rgba(38, 0, 173, 0.8),
+       rgba(38, 0, 173, 0.8)
+     ),
+     url(http://www.mdcollege.in/Image/Sports%20Logo.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 100%;
+   padding: 120px 10px 120px 10px;
+ }
+
+ #show-team-banner {
+   background-image: linear-gradient(
+       rgba(108, 0, 147, 0.7),
+       rgba(255, 255, 255, 0.7)
+     );
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 100%;
+   padding: 120px 10px 120px 10px;
+ }
+
+ #upvote-count {
+   display: inline;
+ }
+
+ #downvote-count {
+   display: inline;
+ }
