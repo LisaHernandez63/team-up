@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
     <title>TeamUp</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
   </head>
 
   <body>
     <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
     <%= yield %>
+    <div class="row text-center blue-bg white-text" id="bottom-bar">
+      <div class="large-5 small-12 column">
+        <h3>Team Up</h3>
+        <ul class="no-bullets">
+          <li>CEO Lisa Hernandez</li>
+          <li>CFO Kristen Hernandez</li>
+          <li>HR Director Megan Hernandez</li>
+          <li>Marketing Director Brandon Hernandez</li>
+        </ul>
+      </div>
+      <div class="large-2 small-12 column">
+        <br /><br />
+      <a href="/monsters/home"><img src=<%= image_url("MonsterS_logo_footer.png") %> /></a>
+
+      </div>
+      <div class="large-5 small-12 column">
+        <h3>Contact Us</h3>
+
+        111 Team Up Plaza<br />
+        Boston, MA 02345
+        <br />
+      </div>
+    </div>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
