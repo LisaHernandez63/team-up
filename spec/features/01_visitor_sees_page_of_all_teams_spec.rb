@@ -11,7 +11,7 @@ feature "visitor sees page of all teams" do
       town: 'Lexington',
       state: 'MA',
       zip: '02420',
-      img: '/features/spec/app/assets/images/IMG_2871.jpg',
+      img: 'IMG_2871.jpg',
       description: 'A young hockey team with alot of heart'
     )
 

@@ -23,3 +23,8 @@ Things you may want to cover:
 
 * ...
 # team-up
+
+[ ![Codeship Status for LisaHernandez63/](https://codeship.com/projects/d8c13e40-c92f-0134-5dca-6a795a0b4831/status?branch=master)](https://codeship.com/projects/199208)
+
+![Code Climate](https://codeclimate.com/github/LisaHernandez63/team-up.png)
+![Coverage Status](https://coveralls.io/repos/LisaHernandez63/team-up/badge.png)
