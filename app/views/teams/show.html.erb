@@ -12,6 +12,33 @@
   <li>School: <%= @team.schoolname %></li>
   <li>Address: <%= @team.streetaddress%></li>
   <li><%= @team.town %>, <%= @team.state %><%= @team.zip %></li>
-
 </ul>
+</div>
+
+<div class="row text-center">
+<h2>Players</h2>
+<div id="add-background-light">
+<ul class="no-bullets">
+<div class="large-6 small-12 column">
+<li><h3>NAME</h3>
+</div>
+<div class="large-6 small-12 column">
+<li><h3>POSITION</li></h3>
+</div>
+<% if @players.empty? %>
+  We don't have any players on this team yet!
+<% else %>
+  <% @players.each do |player| %>
+      <div id="add-background-light">
+      <ul class="no-bullets">
+      <div class="large-6 small-12 column">
+      <li><h3><%= link_to "#{player.firstname} #{player.lastname}", player_path(player.id)%></h3>
+      </div>
+      <div class="large-6 small-12 column">
+      <li><h3><%= player.position %></li></h3>
+      </div>
+      </ul>
+  <% end %>
+<% end %>
+<%= link_to 'Back', teams_path, class: "button" %>
 </div>
