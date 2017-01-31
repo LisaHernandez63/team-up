@@ -1,0 +1,15 @@
+<div class="row text-center white-text" id="add-team-banner">
+<h1><%= @player.firstname %>&nbsp<%= @player.lastname %></h1>
+</div>
+
+<div class="row text-center bold">
+<ul class="no-bullets bold">
+  <li><img src=<%= image_url @player.photo %> width="700px" /></li>
+  <% unless @player.video.nil? %>
+    <li><%= @player.video %></li>
+  <% end %>
+  <li>Favorite Night Before Game Meal: <%= @player.fav_pregame_meal %></li>
+  <li>Favorite Pregame Drink: <%= @player.fav_pregame_drink%></li>
+</ul>
+<%= link_to 'Back', :back, class: "button" %>
+</div>
