@@ -1,4 +1,4 @@
-class Workout_exercise < ActiveRecord::Base
+class WorkoutExercise < ActiveRecord::Base
   belongs_to :exercise
   belongs_to :workout
   validates :exercise, presence: true
