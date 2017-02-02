@@ -1,7 +1,6 @@
 <div class="row text-center white-text" id="add-team-banner">
 <h1><%= @team.teamname %></h1>
 </div>
-
 <div class="row text-center bold">
 <ul class="no-bullets bold">
   <li><img src=<%= image_url @team.img %> width="700px" /></li>
@@ -40,5 +39,6 @@
       </ul>
   <% end %>
 <% end %>
+
 <%= link_to 'Back', teams_path, class: "button" %>
 </div>

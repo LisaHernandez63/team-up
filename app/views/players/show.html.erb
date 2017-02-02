@@ -11,5 +11,16 @@
   <li>Favorite Night Before Game Meal: <%= @player.fav_pregame_meal %></li>
   <li>Favorite Pregame Drink: <%= @player.fav_pregame_drink%></li>
 </ul>
+<div class="row text-center white-text">
+<h1>Workouts</h1>
+</div>
+
+<div class="row text-center blue-text">
+<ul class="no-bullets" id="team-list">
+  <% @workouts.each do |workout| %>
+    <li><h2><%= link_to workout.name, workout %></h2></li>
+  <% end %>
+</ul>
+</div>
 <%= link_to 'Back', :back, class: "button" %>
 </div>
