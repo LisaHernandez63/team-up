@@ -11,5 +11,7 @@
   <li>Favorite Night Before Game Meal: <%= @player.fav_pregame_meal %></li>
   <li>Favorite Pregame Drink: <%= @player.fav_pregame_drink%></li>
 </ul>
+<%binding.pry %>
 <%= link_to 'Back', :back, class: "button" %>
+<%= link_to 'Player Workouts', workouts_path(@player), class: "button" %>
 </div>
