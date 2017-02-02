@@ -1,0 +1,55 @@
+<div class="row text-center white-text" id="add-team-banner">
+<h1>Add a Team!</h1>
+</div>
+<div class="row text-center" id="add-background-light">
+  <%= form_for (@team) do |f| %>
+    <div class="form-element">
+      <%= f.label :name %>
+      <%= f.text_field :teamname %>
+    </div>
+    <br />
+    <div class="form-element">
+      <%= f.label :coach %>
+      <%= f.text_field :coach %>
+    </div>
+    <br />
+    <div class="form-element">
+      <%= f.label :schoolname%>
+      <%= f.text_field :schoolname%>
+    </div>
+    <br />
+    <div class="form-element">
+      <%= f.label :streetaddress %>
+      <%= f.text_area :streetaddress %>
+    </div>
+    <br />
+    <div class="form-element">
+      <%= f.label :town%>
+      <%= f.text_field :town %>
+    </div>
+    <br />
+    <div class="form-element">
+      <%= f.label :state%>
+      <%= f.text_field :state %>
+    </div>
+    <br />
+    <div class="form-element">
+      <%= f.label :zip%>
+      <%= f.text_field :zip %>
+    </div>
+    <br />
+    <div class="form-element">
+      <%= f.label :img%>
+      <%= f.text_field :img, value: "" %>
+    </div>
+    <br />
+    <div class="form-element">
+      <%= f.label :description%>
+      <%= f.text_field :description %>
+    </div>
+    <br />
+    <div>
+    <%= f.submit "Save", class: "button" %>
+    </div>
+  <% end %>
+</div>
