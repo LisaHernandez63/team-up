@@ -1,14 +1,12 @@
-<div class="row text-center white-text" id="add-team-banner">
+
+<div class="row text-center white-text">
 <h1>Teams</h1>
 </div>
-
-<div class="row text-center blue-text no-bullets">
-<ul class="no-bullets" id="team-list">
+<div class="row text-center white-text no-bullets">
+<ul class="no-bullets white-text">
   <% @teams.each do |team| %>
     <li><h2><%= link_to team.teamname, team %></h2></li>
   <% end %>
 </ul>
-<li><%= link_to 'Add A Team', new_team_path, class:"button" %></li>
+<p><%= link_to 'Add A Team', new_team_path, class:"button" %></p>
 </div>
-
-<div id="app"></div>

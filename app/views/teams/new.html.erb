@@ -1,7 +1,5 @@
-<div class="row text-center white-text" id="add-team-banner">
+<div class="row text-center white-text">
 <h1>Add a Team!</h1>
-</div>
-<div class="row text-center" id="add-background-light">
   <%= form_for (@team) do |f| %>
     <div class="form-element">
       <%= f.label :name %>
@@ -42,14 +40,14 @@
       <%= f.label :img%>
       <%= f.text_field :img, value: "" %>
     </div>
-    <br />
+    <br/>
     <div class="form-element">
       <%= f.label :description%>
       <%= f.text_field :description %>
     </div>
-    <br />
-    <div>
+    <br/>
     <%= f.submit "Save", class: "button" %>
-    </div>
+  </br>
+    <%= link_to 'Back', teams_path, class: "button" %>
   <% end %>
 </div>
