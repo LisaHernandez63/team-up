@@ -1,0 +1,24 @@
+<body class="player-bg text-center black-text"
+<div class="row text-center white-text">
+<h1><%= @workout.name %></h1>
+</div>
+<div class="row text-center bold">
+<ul class="no-bullets bold">
+  <li>Frequency: <%= @workout.frequency %></li>
+</ul>
+<% if @exercises.empty? %>
+  We don't have any exercises in this workout yet!
+<% else %>
+  <% @exercises.each do |exercise| %>
+      <ul class="no-bullets">
+      <div class="large-12 small-12 column">
+      <li><h3><%= link_to "#{exercise.name}", exercise_path(exercise.id)%></h3>
+      </div>
+      </ul>
+  <% end %>
+<% end %>
+</div>
+<%= link_to 'Add Exercises', new_workout_exercise_path(@workout), class:"button" %>
+<br/>
+<%= link_to 'Back', :back, class: "button" %>
+</body>

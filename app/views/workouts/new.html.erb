@@ -1,0 +1,19 @@
+
+<div class="row text-center white-text">
+<h1>Add a Workout!</h1>
+  <%= form_for [@player, @workout] do |f| %>
+    <div class="form-element">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <br />
+    <div class="form-element">
+      <%= f.label :frequency %>
+      <%= f.text_field :frequency %>
+    </div>
+    <br/>
+    <%= f.submit "Save", class: "button" %>
+  </br>
+    <%= link_to 'Back', :back, class: "button" %>
+  <% end %>
+</div>

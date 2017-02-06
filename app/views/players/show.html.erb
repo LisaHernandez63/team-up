@@ -1,10 +1,11 @@
-<div class="row text-center white-text" id="add-team-banner">
+<body class="soccer-bg text-center white-text">
+<div class="row text-center white-text">
 <h1><%= @player.firstname %>&nbsp<%= @player.lastname %></h1>
 </div>
 
 <div class="row text-center bold">
 <ul class="no-bullets bold">
-  <li><img src=<%= image_url @player.photo %> width="700px" /></li>
+  <li><img src=<%= image_url @player.photo %> width="600px" /></li>
   <% unless @player.video.nil? %>
     <li><%= @player.video %></li>
   <% end %>
@@ -22,5 +23,8 @@
   <% end %>
 </ul>
 </divclass="row text-center white-text">
+<%= link_to 'Add a Workout', new_player_workout_path(@player), class:"button" %>
+<br/>
 <%= link_to 'Back', :back, class: "button" %>
 </div>
+</body>

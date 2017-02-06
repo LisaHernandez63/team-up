@@ -1,6 +1,6 @@
-class CreateWorkexs < ActiveRecord::Migration[5.0]
+class CreateWorkexes < ActiveRecord::Migration[5.0]
   def change
-    create_table :workexs do |t|
+    create_table :workexes do |t|
       t.belongs_to :exercise, null: false
       t.belongs_to :workout, null: false
 
