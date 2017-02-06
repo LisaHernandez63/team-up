@@ -16,15 +16,16 @@ ActiveRecord::Schema.define(version: 20170202011724) do
   enable_extension "plpgsql"
 
   create_table "exercises", force: :cascade do |t|
-    t.string   "name",       null: false
-    t.string   "category",   null: false
-    t.string   "numsets",    null: false
-    t.string   "numreps",    null: false
-    t.string   "equipment",  null: false
+    t.string   "name",        null: false
+    t.string   "description", null: false
+    t.string   "category",    null: false
+    t.string   "num_sets",    null: false
+    t.string   "num_reps",    null: false
+    t.string   "equipment"
     t.string   "photo"
     t.string   "video"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "players", force: :cascade do |t|
@@ -76,13 +77,13 @@ ActiveRecord::Schema.define(version: 20170202011724) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  create_table "workexs", force: :cascade do |t|
+  create_table "workexes", force: :cascade do |t|
     t.integer  "exercise_id", null: false
     t.integer  "workout_id",  null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.index ["exercise_id"], name: "index_workexs_on_exercise_id", using: :btree
-    t.index ["workout_id"], name: "index_workexs_on_workout_id", using: :btree
+    t.index ["exercise_id"], name: "index_workexes_on_exercise_id", using: :btree
+    t.index ["workout_id"], name: "index_workexes_on_workout_id", using: :btree
   end
 
   create_table "workouts", force: :cascade do |t|

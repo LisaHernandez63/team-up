@@ -1,6 +1,6 @@
 class Workout < ApplicationRecord
   validates_presence_of :name, :frequency
-  has_many :workexs
-  has_many :exercises, through: :workexs
+  has_many :workexes
+  has_many :exercises, through: :workexes
   belongs_to :player
 end

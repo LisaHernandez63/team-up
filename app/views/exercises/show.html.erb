@@ -1,0 +1,18 @@
+<body class="exercise-bg text-center black-text"
+<div class="row text-center white-text">
+<h1><%= @exercise.name %></h1>
+</div>
+<div class="row text-center bold">
+<ul class="no-bullets bold">
+  <li>Description: <%= @exercise.description %></li>
+  <li>Category: <%= @exercise.category %></li>
+  <li>Number of Sets: <%= @exercise.num_sets %></li>
+  <li>Number of Reps: <%= @exercise.num_reps %></li>
+  <li>Equipment: <%= @exercise.equipment %></li>
+  <li>Photo: <%= @exercise.photo %></li>
+  <li>Video: <%= @exercise.video %></li>
+</ul>
+</br>
+  <%= link_to 'Back', :back, class: "button" %>
+</div>
+</body>

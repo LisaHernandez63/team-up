@@ -13,8 +13,11 @@
  *= require_tree .
  *= require_self
  *= require foundation_and_overrides
+ /* Remove margins and padding from the list, and add a black background color */
 
- */
+a {
+  color: white;
+}
 .h2 {
   text-decoration-color: white;
 }
@@ -29,6 +32,29 @@
   padding-right: 2cm;
   margin: 0px;
   background-repeat: no-repeat;
+}
+
+.teams-bg {
+  background: url(weights.jpg)no-repeat center center fixed;
+}
+.add-teams-bg {
+  background: url(SNEAKERS.jpg)no-repeat center center fixed;
+}
+.player-bg {
+  background: url(dumbell.jpg)no-repeat center center fixed;
+}
+
+.exercise-bg {
+  background: url(SOCCERF.png)no-repeat center center fixed;
+}
+
+.soccer-bg {
+  background: url(dumbell.jpg)no-repeat center center fixed;
+}
+
+.nav-bar {
+  float: right;
+  margin-top: 1em;
 }
 
 .top-bar {
@@ -65,6 +91,10 @@
 
 .white-text {
   color: white;
+}
+
+.black-text {
+  color: black;
 }
 
 .bold {

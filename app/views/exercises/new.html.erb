@@ -1,0 +1,44 @@
+<div class="row text-center white-text">
+<h1>Add an exercise to your Workout!</h1>
+  <%= form_for [@workout, @exercise] do |f| %>
+    <div class="form-element">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <br />
+    <div class="form-element">
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+    </div>
+    <div class="form-element">
+      <%= f.label :category %>
+      <%= f.text_field :category %>
+    </div>
+    <div class="form-element">
+      <%= f.label :num_sets %>
+      <%= f.text_field :num_sets %>
+    </div>
+    <br />
+    <div class="form-element">
+      <%= f.label :num_reps %>
+      <%= f.text_field :num_reps %>
+    </div>
+    <div class="form-element">
+      <%= f.label :equipment %>
+      <%= f.text_field :equipment %>
+    </div>
+    <br />
+    <div class="form-element">
+      <%= f.label :photo %>
+      <%= f.text_field :photo %>
+    </div>
+    <div class="form-element">
+      <%= f.label :video %>
+      <%= f.text_field :video %>
+    </div>
+    <br/>
+    <%= f.submit "Save", class: "button" %>
+  </br>
+    <%= link_to 'Back', :back, class: "button" %>
+  <% end %>
+</div>

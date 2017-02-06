@@ -1,7 +1,7 @@
 
 <div class="row text-center white-text">
 <h1>Add a Workout!</h1>
-  <%= form_for (@workout) do |f| %>
+  <%= form_for [@player, @workout] do |f| %>
     <div class="form-element">
       <%= f.label :name %>
       <%= f.text_field :name %>
@@ -14,6 +14,6 @@
     <br/>
     <%= f.submit "Save", class: "button" %>
   </br>
-    <%= link_to 'Back', player_path, class: "button" %>
+    <%= link_to 'Back', :back, class: "button" %>
   <% end %>
 </div>
