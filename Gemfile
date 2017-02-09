@@ -4,7 +4,15 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+
+require 'rest-client'
+require 'json'
+
 gem 'devise'
+gem 'rest-client'
+gem 'mime-types'
+gem 'netrc'
+gem 'http-cookie'
 
 gem 'foundation-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

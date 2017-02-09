@@ -10,14 +10,35 @@
          <%= csrf_meta_tags %>
   </head>
 <body>
-  <div class="row">
+  <div class="row white-text">
   <div class="nav-bar">
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <a href="/">Team Up Home</a>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <a href="/teams">All Teams</a>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <a href="/teams/new">Add a Team</a>
+    <div id="responsive-menu">
+          <div class="top-bar-right">
+            <ul class="dropdown menu align-middle" data-dropdown-menu>
+                <%= stylesheet_link_tag    'application', media: 'all' %>
+                <a href="/">Team Up Home | </a>
+                <%= stylesheet_link_tag    'application', media: 'all' %>
+                <a href="/teams">All Teams |</a>
+                <%= stylesheet_link_tag    'application', media: 'all' %>
+                <a href="/teams/new">Add a Team |</a>
+                 <ul class="menu-vertical no-bullets">
+                <% if user_signed_in? %>
+                  <a href="#"><%= current_user.username %></a>
+                <% else %>
+                  <a href="#">Account</a>
+                <% end %>
+
+                  <% if user_signed_in? %>
+                    <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
+                    <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+                  <% else %>
+                    <li><%= link_to "Sign up", new_user_registration_path, :class => ''  %></li>
+                    <li><%= link_to "Login", new_user_session_path, :class => ''  %></li>
+                  <% end %>
+                </ul>
+            </ul>
+          </div>
+        </div>
 </div>
 </div>
 

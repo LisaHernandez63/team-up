@@ -1,5 +1,5 @@
 class Player < ApplicationRecord
-  validates_presence_of :firstname, :lastname, :player
+  validates_presence_of :first_name, :last_name
   has_many :workouts
   belongs_to :team
 end
