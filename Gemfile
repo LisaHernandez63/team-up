@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-require 'rest-client'
+
 require 'json'
 
 gem 'devise'
