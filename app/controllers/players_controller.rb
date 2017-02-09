@@ -27,13 +27,13 @@ class PlayersController < ApplicationController
 
     def player_params
       params.require(:player).permit(
-        :first_name,
-        :last_name,
-        :position,
-        :photo,
-        :video,
-        :fav_pregame_meal,
-        :fav_pregame_drink
+      :first_name,
+      :last_name,
+      :position,
+      :photo,
+      :video,
+      :fav_pregame_meal,
+      :fav_pregame_drink
       )
     end
 end

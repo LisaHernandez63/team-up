@@ -17,8 +17,9 @@
 
 label {
   color: white;
-  font-weight: bold;
   font-size: x-large;
+  font-weight: bold;
+
 }
 
 a {
@@ -27,8 +28,9 @@ a {
 .h2 {
   text-decoration-color: white;
 }
+
 .signup {
-  text-decoration-color: white;
+  text-decoration-color: #ffffff;
 }
 .menu-vertical {
   float: right;
@@ -77,10 +79,6 @@ a {
     height:40px;
 }
 
-.form-element {
-  text-decoration-color: white;
-}
-
 #bottom-bar {
   position:fixed;
   bottom:0;
@@ -92,8 +90,6 @@ a {
 .form-element {
   max-width: 400px;
   margin: 0 auto;
-  text-decoration-color: #ffffff;
-  color: #ffffff;
 }
 
 .no-bullets {
