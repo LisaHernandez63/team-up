@@ -32,7 +32,7 @@
       <div id="add-background-light">
       <ul class="no-bullets">
       <div class="large-6 small-12 column">
-      <li><h3><%= link_to "#{player.firstname} #{player.lastname}", player_path(player.id)%></h3>
+      <li><h3><%= link_to "#{player.first_name} #{player.last_name}", player_path(player.id)%></h3>
       </div>
       <div class="large-6 small-12 column">
       <li><h3><%= player.position %></li></h3>
@@ -41,6 +41,7 @@
   <% end %>
 <% end %>
 </br>
+<%= link_to 'Add Players', new_team_player_path(@team), class:"button" %>
 <%= link_to 'Back', teams_path, class: "button" %>
 </div>
 </body>

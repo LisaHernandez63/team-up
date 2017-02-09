@@ -1,5 +1,12 @@
 class ExercisesController < ApplicationController
 
+  def index
+    base_url = "https://wger.de/api/v2/exercise.json"
+    response = RestClient.get base_url
+    @data = JSON.load response
+    @results = @data["results"]
+  end
+
   def show
     @exercise = Exercise.find(params[:id])
   end

@@ -15,21 +15,31 @@
  *= require foundation_and_overrides
  /* Remove margins and padding from the list, and add a black background color */
 
+label {
+  color: white;
+  font-weight: bold;
+  font-size: x-large;
+}
+
 a {
   color: white;
 }
 .h2 {
   text-decoration-color: white;
 }
+.signup {
+  text-decoration-color: white;
+}
+.menu-vertical {
+  float: right;
+}
+
  body {
   background: url(team_up.jpg)no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
-  background-size: 100%;
+  background-attachment: fixed;
   padding-left: 2cm;
-  padding-right: 2cm;
+  padding-right: 1cm;
   margin: 0px;
   background-repeat: no-repeat;
 }
@@ -82,7 +92,8 @@ a {
 .form-element {
   max-width: 400px;
   margin: 0 auto;
-  text-decoration-color: white;
+  text-decoration-color: #ffffff;
+  color: #ffffff;
 }
 
 .no-bullets {

@@ -1,0 +1,13 @@
+<body class="teams-bg text-center white-text">
+<div class="row text-center white-text">
+<h1>Exercises Data</h1>
+</div>
+<div class="row text-center white-text no-bullets">
+<ul class="no-bullets white-text">
+  <% @results.each do |result| %>
+      <li><h2><%= link_to result["name"] %></h2></li>
+      <li><%= result["description"]%></li>
+    <% end %>
+</ul>
+</div>
+</body>

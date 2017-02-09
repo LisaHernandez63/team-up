@@ -1,0 +1,43 @@
+<div class="row text-center white-text">
+<h1>Add a Player</h1>
+  <%= form_for [@team, @player] do |f| %>
+    <div class="form-element">
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name %>
+    </div>
+    <br />
+    <div class="form-element">
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>
+    </div>
+    <br/>
+    <div class="form-element">
+      <%= f.label :position %>
+      <%= f.text_field :position %>
+    </div>
+    <br/>
+    <div class="form-element">
+      <%= f.label :photo %>
+      <%= f.text_field :photo %>
+    </div>
+    <br/>
+    <div class="form-element">
+      <%= f.label :video %>
+      <%= f.text_field :video %>
+    </div>
+    <br/>
+    <div class="form-element">
+      <%= f.label :fav_pregame_meal %>
+      <%= f.text_field :fav_pregame_meal %>
+    </div>
+    <br/>
+    <div class="form-element">
+      <%= f.label :fav_pregame_drink %>
+      <%= f.text_field :fav_pregame_drink %>
+    </div>
+    <br/>
+    <%= f.submit "Save", class: "button" %>
+  </br>
+    <%= link_to 'Back', :back, class: "button" %>
+  <% end %>
+</div>
