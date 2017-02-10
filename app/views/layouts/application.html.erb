@@ -9,49 +9,13 @@
          <%= csrf_meta_tags %>
   </head>
 <body>
-  <div class="nav-bar">
-  <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
-      <button class="menu-icon dark" type="button" data-toggle></button>
-  </span>
-  </div>
-    <div id="responsive-menu">
-            <ul class="dropdown menu align-middle" data-dropdown-menu>
-              <li><%= link_to 'Team Up Home | ', root_path %></li>
-              <li><%= link_to 'All Teams | ', teams_path %></li>
-              <li><%= link_to 'Add a Team', new_team_path %></li>
-                <div class="user-info"
-                <li>
-                <% if user_signed_in? %>
-                  <a href="#"><%= current_user.username %></a>
-                <% else %>
-                  <a href="#">Account</a>
-                <% end %>
-              <ul class="menu vertical">
-                  <% if user_signed_in? %>
-                      <li><%= link_to 'My profile', edit_user_registration_path %></li>
-                      <% if current_user.admin? %>
-                      <li><%= link_to 'Manage users', admin_users_path %><li>
-                    <% end %>
-                    <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-                  <% else %>
-                       <li><%= link_to "Sign up", new_user_registration_path, :class => ''  %></li>
-                       <li><%= link_to "Login", new_user_session_path, :class => ''  %></li>
-                  <% end %>
-                </ul>
-              </li>
+      <div class="nav-bar">
+              <ul>
+                <li><%= link_to 'Team Up Home | ', root_path %></li>
+                <li><%= link_to 'All Teams | ', teams_path %></li>
+                <li><%= link_to 'Add a Team', new_team_path %></li>
+              </ul>
             </div>
-            </ul>
-      </div>
-      <% if notice %>
-        <div class="callout small secondary">
-          <%= notice %>
-        </div>
-      <% end %>
-      <% if alert %>
-        <div class="callout small alert">
-          <%= alert %>
-        </div>
-      <% end %>
     <%= yield %>
   </body>
 </html>
