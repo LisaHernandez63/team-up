@@ -24,8 +24,10 @@ ActiveRecord::Schema.define(version: 20170202011724) do
     t.string   "equipment"
     t.string   "photo"
     t.string   "video"
+    t.integer  "user_id",     null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.index ["user_id"], name: "index_exercises_on_user_id", using: :btree
   end
 
   create_table "players", force: :cascade do |t|
@@ -37,9 +39,11 @@ ActiveRecord::Schema.define(version: 20170202011724) do
     t.string   "fav_pregame_meal"
     t.string   "fav_pregame_drink"
     t.integer  "team_id",           null: false
+    t.integer  "user_id",           null: false
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.index ["team_id"], name: "index_players_on_team_id", using: :btree
+    t.index ["user_id"], name: "index_players_on_user_id", using: :btree
   end
 
   create_table "teams", force: :cascade do |t|
@@ -52,8 +56,10 @@ ActiveRecord::Schema.define(version: 20170202011724) do
     t.string   "zip",           null: false
     t.string   "img"
     t.text     "description"
+    t.integer  "user_id",       null: false
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.index ["user_id"], name: "index_teams_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -87,9 +93,11 @@ ActiveRecord::Schema.define(version: 20170202011724) do
     t.string   "name",       null: false
     t.string   "frequency",  null: false
     t.integer  "player_id",  null: false
+    t.integer  "user_id",    null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["player_id"], name: "index_workouts_on_player_id", using: :btree
+    t.index ["user_id"], name: "index_workouts_on_user_id", using: :btree
   end
 
 end
