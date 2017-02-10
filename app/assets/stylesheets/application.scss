@@ -46,12 +46,14 @@ a {
   float: right;
 }
 
+.top-bar {
+  background-color: black;
+}
+
  body {
   background: url(team_up.jpg)no-repeat center center fixed;
   background-size: cover;
   background-attachment: fixed;
-  padding-left: 2cm;
-  padding-right: 1cm;
   margin: 0px;
   background-repeat: no-repeat;
 }
@@ -77,16 +79,6 @@ a {
 .nav-bar {
   float: right;
   margin-top: 1em;
-}
-
-.top-bar {
-    list-style: none;
-    font-weight: bold;
-    margin-bottom: 10px;
-    width: 100%;
-    text-align: center;
-    background-color: #000000;
-    height:40px;
 }
 
 .form-element {
