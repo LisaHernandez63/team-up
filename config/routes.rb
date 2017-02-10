@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root "pages#show"
   devise_for :users
+  resources :pages, only: [:show]
   resources :teams, only: [:index, :show, :new, :create] do
     resources :players, only: [:show, :new, :create]
   end
