@@ -33,15 +33,34 @@ h3 {
   color: white;
 }
 
-li {
-    float: right;
-    display: block;
-    padding: 8px;
-}
-
 a {
   color: white;
 }
+
+ul {
+  list-style-type: none;
+}
+.nav-bar ul {
+  list-style: none;
+  text-align: right;
+  padding: 0;
+  margin-top: 1em;
+  margin-right: 1em;
+}
+
+.nav-bar li {
+  display: inline;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  margin-top: 1em;
+}
+
+.no-bullets {
+  list-style-type: none;
+}
+
 .h2 {
   text-decoration-color: white;
 }
@@ -52,13 +71,6 @@ a {
 .user-info {
   float: right;
   align-content: right;
-}
-.menu-vertical {
-  float: right;
-}
-
-.top-bar {
-  background-color: black;
 }
 
  body {
@@ -87,15 +99,6 @@ a {
   background: url(dumbell.jpg)no-repeat center center fixed;
 }
 
-.nav-bar {
-  float: right;
-  margin-top: 1em;
-}
-
-.form-element {
-  text-decoration-color: white;
-}
-
 #bottom-bar {
   position:fixed;
   bottom:0;
@@ -109,10 +112,6 @@ a {
   margin: 0 auto;
   text-decoration-color: #ffffff;
   color: #ffffff;
-}
-
-.no-bullets {
-  list-style: none;
 }
 
 .white-text {

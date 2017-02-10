@@ -4,7 +4,7 @@ feature "visitor sees details for a particular team" do
   scenario "clicks link from index and sees info for that team" do
   user1 = User.create(
       email: 'lhdiff@yahoo.com',
-      encrypted_password: 'password',
+      password: 'password',
       username: 'Diff'
     )
 

@@ -9,40 +9,13 @@
          <%= csrf_meta_tags %>
   </head>
 <body>
-  <div class=row>
-  <ul>
-    <li><%= link_to 'Team Up Home | ', root_path %></li>
-    <li><%= link_to 'All Teams | ', teams_path %></li>
-    <li><%= link_to 'Add a Team', new_team_path %></li>
-
-     <% if user_signed_in? %>
-       <li><a href="#"><%= current_user.username %></a></li>
-     <% else %>
-      <li><a href="#">Account</a></li>
-     <% end %>
-   </ul>
-     <ul class="menu vertical">
-                 <% if user_signed_in? %>
-                     <li><%= link_to 'My profile', edit_user_registration_path %></li>
-                     <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-                 <% else %>
-                      <li><%= link_to "Sign up", new_user_registration_path, :class => ''  %></li>
-                      <li><%= link_to "Login", new_user_session_path, :class => ''  %></li>
-                 <% end %>
-               </ul>
-     </div>
-     <% if notice %>
-       <div class="callout small secondary">
-         <%= notice %>
-       </div>
-     <% end %>
-     <% if alert %>
-       <div class="callout small alert">
-         <%= alert %>
-       </div>
-     <% end %>
-
-</div>
+      <div class="nav-bar">
+              <ul>
+                <li><%= link_to 'Team Up Home | ', root_path %></li>
+                <li><%= link_to 'All Teams | ', teams_path %></li>
+                <li><%= link_to 'Add a Team', new_team_path %></li>
+              </ul>
+            </div>
     <%= yield %>
   </body>
 </html>

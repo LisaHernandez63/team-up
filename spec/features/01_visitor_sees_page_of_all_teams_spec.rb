@@ -4,7 +4,7 @@ feature "visitor sees page of all teams" do
   scenario "sees names for all teams in db" do
     user1 = User.create(
       email: 'lhdiff@yahoo.com',
-      encrypted_password: 'password',
+      password: 'password',
       username: 'Diff'
       )
 
@@ -25,6 +25,6 @@ feature "visitor sees page of all teams" do
     visit teams_path
 
     expect(page).to have_content "Teams"
-    expect(page).to have_content team1.teamname
+    expect(page).to have_content(team1.teamname)
   end
 end
