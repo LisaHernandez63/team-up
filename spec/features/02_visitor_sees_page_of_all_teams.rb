@@ -2,6 +2,11 @@ require "rails_helper"
 
 feature "visitor sees details for a particular team" do
   scenario "clicks link from index and sees info for that team" do
+  user1 = User.create(
+      email: 'lhdiff@yahoo.com',
+      encrypted_password: 'password',
+      username: 'Diff'
+    )
 
   team1 = Team.create(
     teamname: 'Lexington High Junior Varsity Boys Hockey',
@@ -12,17 +17,15 @@ feature "visitor sees details for a particular team" do
     state: 'MA',
     zip: '02420',
     img: 'IMG_2871.jpg',
+    user_id: user1.id,
     description: 'A young hockey team with a lot of heart'
   )
 
 
     visit team_path
     expect(page).to have_content team1.name
-    click_link team1.name
 
-    expect(page).to have_content team1.name
     expect(page).to have_content team1.description
-    expect(page).to have_link(nil, href: ('mailto:' + monster2.email))
-    expect(page).to have_link(nil, href: monster2.source)
+
   end
 end

@@ -2,6 +2,11 @@ require "rails_helper"
 
 feature "visitor sees page of all teams" do
   scenario "sees names for all teams in db" do
+    user1 = User.create(
+      email: 'lhdiff@yahoo.com',
+      encrypted_password: 'password',
+      username: 'Diff'
+    )
 
     team1 = Team.create(
       teamname: 'Lexington High Junior Varsity Boys Hockey',
@@ -12,6 +17,7 @@ feature "visitor sees page of all teams" do
       state: 'MA',
       zip: '02420',
       img: 'IMG_2871.jpg',
+      user_id: user1.id,
       description: 'A young hockey team with alot of heart'
     )
 
