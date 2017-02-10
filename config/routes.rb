@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "pages#index"
+  root "pages#show"
   devise_for :users
   resources :teams, only: [:index, :show, :new, :create] do
     resources :players, only: [:show, :new, :create]

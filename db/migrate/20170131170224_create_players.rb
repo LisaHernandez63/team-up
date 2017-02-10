@@ -9,6 +9,7 @@ class CreatePlayers < ActiveRecord::Migration[5.0]
       t.string :fav_pregame_meal
       t.string :fav_pregame_drink
       t.belongs_to :team, null: false
+      t.belongs_to :user, null: false
 
       t.timestamps
     end

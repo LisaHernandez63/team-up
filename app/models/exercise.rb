@@ -3,4 +3,5 @@ class Exercise < ApplicationRecord
   :description
   has_many :workexes
   has_many :workouts, through: :workexes
+  belongs_to :user
 end

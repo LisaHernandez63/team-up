@@ -9,6 +9,7 @@ class CreateExercises < ActiveRecord::Migration[5.0]
       t.string :equipment
       t.string :photo
       t.string :video
+      t.belongs_to :user, null: false
 
       t.timestamps
     end

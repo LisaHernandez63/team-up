@@ -3,4 +3,5 @@ class Workout < ApplicationRecord
   has_many :workexes
   has_many :exercises, through: :workexes
   belongs_to :player
+  belongs_to :user
 end

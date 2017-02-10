@@ -4,6 +4,7 @@ class CreateWorkouts < ActiveRecord::Migration[5.0]
       t.string :name, null: false
       t.string :frequency, null: false
       t.belongs_to :player, null: false
+      t.belongs_to :user, null: false
 
       t.timestamps
     end

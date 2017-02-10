@@ -6,10 +6,11 @@ class CreateTeams < ActiveRecord::Migration[5.0]
       t.string :schoolname, null: false
       t.string :streetaddress, null: false
       t.string :town, null: false
-      t.string :state, null: false 
+      t.string :state, null: false
       t.string :zip, null: false
       t.string :img
       t.text :description
+      t.belongs_to :user, null: false
 
       t.timestamps
     end

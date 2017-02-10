@@ -1,12 +1,8 @@
 <body class="teams-bg text-center white-text">
-<div class="row text-center white-text">
 <h1>Teams</h1>
-</div>
-<div class="row text-center white-text no-bullets">
 <ul class="no-bullets white-text">
   <% @teams.each do |team| %>
     <li><h2><%= link_to team.teamname, team %></h2></li>
   <% end %>
 </ul>
-</div>
 </body>
