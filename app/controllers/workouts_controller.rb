@@ -14,6 +14,7 @@ class WorkoutsController < ApplicationController
     @player = Player.find(params[:player_id])
     @workout = Workout.new(workout_params)
     @workout.player = @player
+    @workout.user_id = current_user.id
     if @workout.save
       flash[:notice] = "Workout added successfully"
       redirect_to @workout

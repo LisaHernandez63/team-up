@@ -19,6 +19,7 @@ class ExercisesController < ApplicationController
   def create
     @workout = Workout.find(params[:workout_id])
     @exercise = Exercise.new(exercise_params)
+    @exercise.user_id = current_user.id
     if @exercise.save
       flash[:notice] = "Exercise added successfully"
       @exercise.workexes.create(exercise_id: @exercise.id, workout_id: params[:workout_id])
