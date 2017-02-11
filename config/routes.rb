@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   root "pages#show"
-  devise_for :users, controllers: {
-        sessions: 'users/sessions'
-      }
+  devise_for :users
   resources :users, only: [:show]
   resources :pages, only: [:show]
   resources :teams, only: [:index, :show, :new, :create] do
