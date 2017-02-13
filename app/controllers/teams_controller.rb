@@ -15,13 +15,13 @@ class TeamsController < ApplicationController
   def create
     @team = Team.new(team_params)
     @team.user_id = current_user.id
-    if @team.save
-      flash[:notice] = "Team added successfully"
-      redirect_to @team
-    else
-      flash[:notice] = @team.errors.full_messages.to_sentence
-      render :new
-    end
+      if @team.save
+        flash[:notice] = "Team added successfully"
+        redirect_to @team
+      else
+        flash[:notice] = @team.errors.full_messages.to_sentence
+        render :new
+      end
   end
 
   private
