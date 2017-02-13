@@ -14,13 +14,18 @@ class WorkoutsController < ApplicationController
     @player = Player.find(params[:player_id])
     @workout = Workout.new(workout_params)
     @workout.player = @player
-    @workout.user_id = current_user.id
-    if @workout.save
-      flash[:notice] = "Workout added successfully"
-      redirect_to @workout
-    else
-      flash[:notice] = @workout.errors.full_messages.to_sentence
+    if current_user.nil?
+      flash[:notice] = "Must log in to add Workout"
       render :new
+    else
+      @workout.user_id = current_user.id
+      if @workout.save
+        flash[:notice] = "Workout added successfully"
+        redirect_to @workout
+      else
+        flash[:notice] = @workout.errors.full_messages.to_sentence
+        render :new
+      end
     end
   end
 
