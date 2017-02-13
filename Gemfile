@@ -14,8 +14,11 @@ gem 'netrc'
 gem 'http-cookie'
 gem 'fog-aws'
 gem "fog"
-gem "dotenv-rails"
 gem "mini_magick"
+
+group :development, :test do
+  gem "dotenv-rails"
+end
 
 gem 'foundation-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
