@@ -13,8 +13,9 @@ gem 'mime-types'
 gem 'netrc'
 gem 'http-cookie'
 gem 'fog-aws'
-gem 'figaro'
 gem "fog"
+gem "dotenv-rails"
+gem "mini_magick"
 
 gem 'foundation-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
