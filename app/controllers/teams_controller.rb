@@ -39,7 +39,7 @@ class TeamsController < ApplicationController
         :town,
         :state,
         :zip,
-        :img,
+        :profile_photo,
         :description
       )
     end

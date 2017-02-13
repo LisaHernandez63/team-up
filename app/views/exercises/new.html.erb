@@ -29,9 +29,10 @@
     </div>
     <br />
     <div class="form-element">
-      <%= f.label :photo %>
-      <%= f.text_field :photo %>
+      <%= f.label :photo %><br />
+      <%= f.file_field :photo, autofocus: true %>
     </div>
+    <br/>
     <div class="form-element">
       <%= f.label :video %>
       <%= f.text_field :video %>

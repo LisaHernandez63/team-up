@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170211210721) do
+ActiveRecord::Schema.define(version: 20170212042703) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,11 +54,11 @@ ActiveRecord::Schema.define(version: 20170211210721) do
     t.string   "town",          null: false
     t.string   "state",         null: false
     t.string   "zip",           null: false
-    t.string   "img"
     t.text     "description"
     t.integer  "user_id",       null: false
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.string   "profile_photo"
     t.index ["user_id"], name: "index_teams_on_user_id", using: :btree
   end
 
