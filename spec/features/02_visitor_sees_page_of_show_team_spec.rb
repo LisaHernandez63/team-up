@@ -16,7 +16,7 @@ feature "visitor sees details for a particular team" do
     town: 'Lexington',
     state: 'MA',
     zip: '02420',
-    img: 'IMG_2871.jpg',
+    profile_photo: 'IMG_2871.jpg',
     user_id: user1.id,
     description: 'A young hockey team with a lot of heart'
   )

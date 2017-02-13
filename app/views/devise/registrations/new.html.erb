@@ -10,6 +10,11 @@
     </div>
 
   <div class="field">
+    <%= f.label :profile_photo %><br />
+    <%= f.file_field :profile_photo, autofocus: true %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>

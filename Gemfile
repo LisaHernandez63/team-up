@@ -6,12 +6,16 @@ end
 
 
 require 'json'
-
+gem 'carrierwave'
 gem 'devise'
 gem 'rest-client'
 gem 'mime-types'
 gem 'netrc'
 gem 'http-cookie'
+gem 'fog-aws'
+gem "fog"
+gem "dotenv-rails"
+gem "mini_magick"
 
 gem 'foundation-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
