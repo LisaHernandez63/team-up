@@ -14,14 +14,19 @@ class PlayersController < ApplicationController
     @team = Team.find(params[:team_id])
     @player = Player.new(player_params)
     @player.team = @team
-    @player.user_id = current_user.id
-    if @player.save
-      flash[:notice] = "Player added successfully"
-      redirect_to @player
-    else
-      flash[:notice] = @player.errors.full_messages.to_sentence
+    if current_user.nil?
+      flash[:notice] = "Must log in to add Team"
       render :new
-    end
+    else
+      @player.user_id = current_user.id
+      if @player.save
+        flash[:notice] = "Player added successfully"
+        redirect_to @player
+      else
+        flash[:notice] = @player.errors.full_messages.to_sentence
+        render :new
+      end
+    end 
   end
 
   private

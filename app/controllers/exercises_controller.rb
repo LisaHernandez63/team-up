@@ -19,14 +19,19 @@ class ExercisesController < ApplicationController
   def create
     @workout = Workout.find(params[:workout_id])
     @exercise = Exercise.new(exercise_params)
-    @exercise.user_id = current_user.id
-    if @exercise.save
-      flash[:notice] = "Exercise added successfully"
-      @exercise.workexes.create(exercise_id: @exercise.id, workout_id: params[:workout_id])
-      redirect_to workout_path(@workout)
-    else
-      flash[:notice] = @exercise.errors.full_messages.to_sentence
+    if current_user.nil?
+      flash[:notice] = "Must log in to add Exercise"
       render :new
+    else
+      @exercise.user_id = current_user.id
+      if @exercise.save
+        flash[:notice] = "Exercise added successfully"
+        @exercise.workexes.create(exercise_id: @exercise.id, workout_id: params[:workout_id])
+        redirect_to workout_path(@workout)
+      else
+        flash[:notice] = @exercise.errors.full_messages.to_sentence
+        render :new
+      end
     end
   end
 
