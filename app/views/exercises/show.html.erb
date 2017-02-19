@@ -9,8 +9,7 @@
   <li>Number of Sets: <%= @exercise.num_sets %></li>
   <li>Number of Reps: <%= @exercise.num_reps %></li>
   <li>Equipment: <%= @exercise.equipment %></li>
-  <li><img src=<%= image_url @exercise.photo %> width="600px" /></li>
-  <li>Video: <%= @exercise.video %></li>
+  <li><%= image_tag(@exercise.photo, width: "300")%></li>
 </ul>
 </br>
   <%= link_to 'Back', :back, class: "button" %>

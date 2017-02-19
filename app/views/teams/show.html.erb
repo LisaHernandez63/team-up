@@ -1,9 +1,9 @@
-<body class="player-bg text-center white-text"
-<div class="row text-center white-text">
+<body class="player-bg">
+<div class="text-center white-text">
 <h1><%= @team.teamname %></h1>
 </div>
 <div class="row text-center bold">
-<ul class="no-bullets bold">
+<ul class="no-bullets bold white-text">
   <li><img src= '<%= image_url @team.profile_photo %>' width='600px'/></li>
   <li>Coach: <%= @team.coach %></li>
   <% unless @team.description.nil? %>
@@ -26,7 +26,7 @@
 <li><h3>POSITION</li></h3>
 </div>
 <% if @players.empty? %>
-  We don't have any players on this team yet!
+  <h3>We don't have any players on this team yet!</h3>
 <% else %>
   <% @players.each do |player| %>
       <div id="add-background-light">

@@ -1,4 +1,5 @@
-<div class="row text-center white-text">
+<body class="teams-bg">
+<div class="text-center white-text">
 <h1>Add a Player</h1>
   <%= form_for [@team, @player] do |f| %>
     <div class="form-element">
@@ -19,11 +20,6 @@
     <div class="form-element">
       <%= f.label :photo %><br />
       <%= f.file_field :photo, autofocus: true %>
-    </div>
-    <br/>
-    <div class="form-element">
-      <%= f.label :video %>
-      <%= f.text_field :video %>
     </div>
     <br/>
     <div class="form-element">
