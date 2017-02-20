@@ -1,5 +1,8 @@
 <body class="player-bg">
-<h1><%= @user.username %></h1>
-<h2><%= @user.email %></h2>
-<h2><%= @user.profile_photo%></h2>
+<div class="text-center white-text">
+<li><%= @user.username %></li>
+<li><%= @user.email %></li>
+<li><%= @user.profile_photo%></li>
+<%= link_to "Back", :back, class: "button"  %>
+</div>
 </body>

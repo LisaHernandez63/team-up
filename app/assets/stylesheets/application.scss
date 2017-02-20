@@ -14,6 +14,65 @@
  *= require_self
  *= require foundation_and_overrides
  /* Remove margins and padding from the list, and add a black background color */
+ .dropbtn {
+    color: black;
+    background-color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown li {
+    position: relative;
+    display: inline-block;
+    color: black;
+}
+
+.dropdown button {
+  color: black;
+  width: 160px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    color: black;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    font-size: 16px;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+.top-bar-title a {
+  color:black;
+}
+
+.top-bar-title li {
+  color:black;
+}
 
 label {
   color: white;
@@ -21,51 +80,55 @@ label {
   font-size: x-large;
 }
 
-h2 {
-  color: white;
-}
-
 p {
   color: white;
 }
 
-h3 {
+h1, h2, h3 {
   color: white;
+}
+
+.logo h1 {
+  margin-left: 2.5em;
+  margin-top: 1em;
+  font-family: 'Oswald', sans-serif;
 }
 
 .quote li {
   font-family: 'Oswald', sans-serif;
   font-size: x-large;
   list-style: none;
+  color: white;
+  margin-left: 5em;
 }
-
 
 .callout {
   width: 6cm;
 }
 
+.top-bar-title {
+  color: black;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: x-large;
+}
+
 a {
   color: white;
+  padding: 12px;
 }
 
-ul {
-  list-style-type: none;
-}
-.nav-bar ul {
-  list-style: none;
-  text-align: right;
-  padding: 0;
-  margin-top: 1em;
-  margin-right: 1em;
+.top-bar {
+  background: #2c07ea;
 }
 
-.nav-bar li {
-  display: inline;
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.2em;
-  line-height: 40px;
-  height: 40px;
-  margin-top: 1em;
+.top-bar-right li {
+  background: transparent;
+  color: black;
+}
+
+.top-bar-right ul {
+  background: transparent;
 }
 
 .no-bullets {
@@ -84,8 +147,9 @@ ul {
   align-content: right;
 }
 
- body {
-  background: url(team_up.jpg)no-repeat center center fixed;
+ .home-bg{
+  background:
+  url(team_up.jpg)no-repeat center center fixed;
   background-size: cover;
   background-attachment: fixed;
   margin: 0px;
@@ -93,7 +157,8 @@ ul {
 }
 
 .teams-bg {
-  background: url(weights.jpg)no-repeat center center fixed;
+  background:
+  url(weights.jpg)no-repeat center center fixed;
 }
 .add-teams-bg {
   background: url(SNEAKERS.jpg)no-repeat center center fixed;
@@ -103,7 +168,11 @@ ul {
 }
 
 .exercise-bg {
-  background: url(SOCCERF.png)no-repeat center center fixed;
+  background:
+  linear-gradient(
+      rgba(169,169,169, 0.55),
+      rgba(169,169,169, 0.45)
+    )
 }
 
 .soccer-bg {
@@ -139,7 +208,7 @@ ul {
 
 .button {
   background-color: #000000;
-  text-decoration-color: black;
+  color: white;
   width: 150px;
   font-weight: bold;
 }
