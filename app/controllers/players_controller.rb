@@ -4,7 +4,7 @@ class PlayersController < ApplicationController
     @player = Player.find(params[:id])
     @workouts = @player.workouts
   end
-
+  
   def new
     @team = Team.find(params[:team_id])
     @player = Player.new
@@ -15,7 +15,7 @@ class PlayersController < ApplicationController
     @player = Player.new(player_params)
     @player.team = @team
     if current_user.nil?
-      flash[:notice] = "Must log in to add Team"
+      flash[:notice] = "Must log in to add Player"
       render :new
     else
       @player.user_id = current_user.id
@@ -26,7 +26,7 @@ class PlayersController < ApplicationController
         flash[:notice] = @player.errors.full_messages.to_sentence
         render :new
       end
-    end 
+    end
   end
 
   private

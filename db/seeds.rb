@@ -10,16 +10,16 @@ User.create(
   password: 'password',
   username: 'Diff'
 )
-User.create(
-  email: 'lisaleesa@gmail.com',
-  password: 'password',
-  username: 'Lisa'
-)
-User.create(
-  email: 'Bhernandez@yahoo.com',
-  password: 'password',
-  username: 'Bran'
-)
+# User.create(
+#   email: 'lisaleesa@gmail.com',
+#   password: 'password',
+#   username: 'Lisa'
+# )
+# User.create(
+#   email: 'Bhernandez@yahoo.com',
+#   password: 'password',
+#   username: 'Bran'
+# )
 Team.create(
   teamname: 'Lexington High Junior Varsity Boys Hockey',
   coach: 'Matt Piccarillo',
