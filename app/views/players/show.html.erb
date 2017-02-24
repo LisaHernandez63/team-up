@@ -15,13 +15,16 @@
 <div class="row text-center white-text">
 <h1>Workouts</h1>
 </div>
-
-<div class="row text-center white-text">
-<ul class="no-bullets" id="team-list">
+<% if @workouts.empty? %>
+  <h3>There are no Workouts for this player yet!</h3>
+<% else %>
+  <div class="row text-center white-text">
+  <ul class="no-bullets" id="team-list">
   <% @workouts.each do |workout| %>
     <li><h2><%= link_to workout.name, workout %></h2></li>
   <% end %>
-</ul>
+ </ul>
+ <%end %>
 </divclass="row text-center white-text">
 <%= link_to 'Add a Workout', new_player_workout_path(@player), class:"button" %>
 <br/>
