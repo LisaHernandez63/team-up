@@ -1,9 +1,8 @@
-<body class="add-teams-bg">
-<div class="text-center white-text">
-<h1>Add a Team!</h1>
-  <%= form_for [@team] do |f| %>
+<div class="add-teams-bg text-center white-text">
+<h1>Add a Team</h1>
+  <%= form_for (@team) do |f| %>
     <div class="form-element">
-      <%= f.label :name %>
+      <%= f.label :Name %>
       <%= f.text_field :teamname %>
     </div>
     <br />
@@ -11,45 +10,39 @@
       <%= f.label :coach %>
       <%= f.text_field :coach %>
     </div>
-    <br />
+    <br/>
     <div class="form-element">
-      <%= f.label :schoolname%>
-      <%= f.text_field :schoolname%>
-    </div>
-    <br />
-    <div class="form-element">
-      <%= f.label :streetaddress %>
-      <%= f.text_area :streetaddress %>
-    </div>
-    <br />
-    <div class="form-element">
-      <%= f.label :town%>
-      <%= f.text_field :town %>
-    </div>
-    <br />
-    <div class="form-element">
-      <%= f.label :state%>
-      <%= f.text_field :state %>
-    </div>
-    <br />
-    <div class="form-element">
-      <%= f.label :zip%>
-      <%= f.text_field :zip %>
-    </div>
-    <br />
-    <div class="form-element">
-      <%= f.label :profile_photo %><br />
-      <%= f.file_field :profile_photo, autofocus: true %>
+      <%= f.label :schoolname %>
+      <%= f.text_field :schoolname %>
     </div>
     <br/>
     <div class="form-element">
-      <%= f.label :description%>
+      <%= f.label :streetaddress %>
+      <%= f.text_field :streetaddress %>
+    </div>
+    <br/>
+    <div class="form-element">
+      <%= f.label :state %>
+      <%= f.text_field :state %>
+    </div>
+    <br/>
+    <div class="form-element">
+      <%= f.label :zip %>
+      <%= f.text_field :zip %>
+    </div>
+    <br/>
+    <div class="form-element">
+      <%= f.label :profile_photo %><br />
+      <%= f.file_field :profile_photo%>
+    </div>
+    <br/>
+    <div class="form-element">
+      <%= f.label :description %>
       <%= f.text_field :description %>
     </div>
     <br/>
     <%= f.submit "Save", class: "button" %>
-  </br>
-    <%= link_to 'Back', teams_path, class: "button" %>
+    </br>
+    <%= link_to 'Back', :back, class: "button" %>
   <% end %>
 </div>
-</body>
