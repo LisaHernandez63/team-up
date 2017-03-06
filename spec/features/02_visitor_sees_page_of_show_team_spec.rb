@@ -28,6 +28,13 @@ feature "visitor sees details for a particular team" do
 
     expect(page).to have_content team1.teamname
     expect(page).to have_content team1.description
+    expect(page).to have_content team1.coach
+    expect(page).to have_content team1.schoolname
+    expect(page).to have_content team1.streetaddress
+    expect(page).to have_content team1.town
+    expect(page).to have_content team1.state
+    expect(page).to have_content team1.zip
+    expect(page).to have_content team1.profile_photo
 
   end
 end

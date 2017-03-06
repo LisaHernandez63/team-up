@@ -7,6 +7,7 @@ end
 
 require 'json'
 gem 'carrierwave'
+gem 'carrierwave-video'
 gem 'devise'
 gem 'rest-client'
 gem 'mime-types'
