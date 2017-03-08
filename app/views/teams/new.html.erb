@@ -2,7 +2,7 @@
 <h1>Add a Team</h1>
   <%= form_for (@team) do |f| %>
     <div class="form-element">
-      <%= f.label :Name %>
+      <%= f.label :teamname %>
       <%= f.text_field :teamname %>
     </div>
     <br />
@@ -19,6 +19,11 @@
     <div class="form-element">
       <%= f.label :streetaddress %>
       <%= f.text_field :streetaddress %>
+    </div>
+    <br/>
+    <div class="form-element">
+      <%= f.label :town %>
+      <%= f.text_field :town %>
     </div>
     <br/>
     <div class="form-element">
